@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<title></title>
+	</head>
+	<body>
+		<div class="wrap">
+			<h2>快速搜索消费贷款</h2>
+			<p>贷款金额：<span>不足一万可用小数表示</span></p>
+			<div class="bol">
+				<input type="text" placeholder="万元" class="val1"/>
+				<div class="select1">
+					<img src="img/btn_bottom.jpg" alt="" />
+					<ul>
+						<li>5万</li>
+						<li>10万</li>
+						<li>15万</li>
+						<li>20万</li>
+						<li>25万</li>
+						<li>30万</li>
+					</ul>
+				</div>
+			     </select>
+			</div>
+			<p>贷款金额：<span>不足一万可用小数表示</span></p>
+			<div class="bol">
+				<input type="text" placeholder="年" class="val2"/>
+				<div class="select2">
+					<img src="img/btn_bottom.jpg" alt="" />
+				<ul class="aw">
+						<li>1年</li>
+						<li>2年</li>
+						<li>3年</li>
+						<li>4年</li>
+						<li>5年</li>
+						<li>6年</li>
+					</ul>
+				</div>
+			</div>
+			<button>搜索一下</button>
+			<p class="pp">9164656信贷产品 2000家银行 1403家小袋公司</p>
+		</div>
+	</body>
+	<script>
+		$('.select1').hover(function(){
+			$(this).children("ul").show();
+			$(".select1 ul li").click(function(){
+				$('.val1').val($(this).html()).next().children('ul').hide();
+			})
+		},function(){
+			$(".select1 ul li").click(function(){
+				$('.val1').val($(this).html()).next().children('ul').hide();
+			})
+		})
+		
+		$('.select2').hover(function(){
+			$(this).children("ul").show();
+			$(".select2 ul li").click(function(){
+				$('.val2').val($(this).html()).next().children('ul').hide();
+			})
+		},function(){
+			$(".select2 ul li").click(function(){
+				$('.val2').val($(this).html()).next().children('ul').hide();
+			})
+		})
+	</script>
+</html>
